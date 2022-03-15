@@ -1,5 +1,5 @@
 # PyTorch 用户手册（Pytorch User Manual）
-![pytorch](pytorch-logo-dark.png)
+![pytorch](Pytorch-logo.png)
 
 ## 用户手册介绍
 这是一个开源的关于Pytorch的用户手册，目标是帮助那些希望和使用PyTorch进行深度学习开发和研究的朋友快速入门。
