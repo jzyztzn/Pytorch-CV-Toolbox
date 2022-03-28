@@ -17,13 +17,33 @@
 
 ## 目录
 
-### 第一章：Pytorch训练策略以及常见问题
+### 第一章：Backbone
 
-### 第二章：Pytorch训练技巧以及涨点方案
+### 第二章：Neck
 
-### 第三章：Pytorch搭建自己的网络结构及工程代码
+### 第三章：Head
 
-### 第四章：Pytorch部署常见问题及相关工具
+### 第四章：Loss
+
+## Loss
+
+解决正负样本不均衡问题，从Focal Loss 到 GHM loss
+
+CE的思路：在交叉熵损失前面加上一个参数α，从而去平衡正负样本，但是对难易样本的不平衡没有帮助；
+
+Focal的思路：模型应该主要关心难例样本，将高置信度样本的损失再降低一些，在此基础上再关注平衡样本，从置信度p的角度衰减loss；
+
+GHM的思路：样本中具备离散点，关注难例的问题就是让模型只关注到了这些离散点，另外两个超参数需联合实验，从一定范围置信度p的样本数量的角度衰减loss；
+
+单位梯度模长g部分的样本个数，对于每个样本，把交叉熵CE×该样本梯度密度的倒数即可。
+
+
+“Gradient Harmonized Single-stage Detector",AAAI2019
+
+![image](https://user-images.githubusercontent.com/12441747/160329733-6609cd6a-ad8d-4655-9219-2d225e8e3290.png)
+
+参考： https://zhuanlan.zhihu.com/p/80594704
+
 
 ## License
 
