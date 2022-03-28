@@ -25,6 +25,17 @@
 
 ### 第四章：Loss
 
+
+## Backbone
+
+ResNet: the first one to introduce identity shortcut to stabilize the training of deep neural network
+ResNeXt: bring the idea multi-path to ResNet
+SENet: integrate attention mechanism to ResNet
+SKNet: add adaptive receptive field of convolution
+ResNeSt: integrate attention mechanism, multi-path and brach-selection to ResNet
+
+参考文献：https://sheng-fang.github.io/2020-05-20-review-resnet-family/
+
 ## Loss
 
 解决正负样本不均衡问题，从Focal Loss 到 GHM loss
