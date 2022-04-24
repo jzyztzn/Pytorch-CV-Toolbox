@@ -22,3 +22,40 @@ What's going on here?
   1) num_classes=0 tells timm to return a pooled feature vector. The size of this vector can vary between architectures (e.g. 512 for ResNet34 or 1280 for EfficientNet-B0)
   LazyLinear will determine what the input size is and create a normal linear layer accordingly
   2) This allows us to quickly switch architectures (e.g. in a config file) without changing code. 
+
+
+
+
+## Concat Multi Dataset
+PyTorch provides a torch.utils.data.ConcatDataset capable of connecting several different data sets. This class is useful to assemble different existing datasets.
+```
+from torchvision.datasets import MNIST
+from torchvision.datasets import CIFAR100
+from torch.utils.data import ConcatDataset
+
+import numpy as np
+
+if __name__ == "__main__":
+    mnist_data = MNIST('./data', train=True, download=True)
+    print('mnist: ', len(mnist_data))
+    cifar10_data = CIFAR100('./data', train=True, download=True)
+    print('cifar: ', len(cifar10_data))
+
+    concat_data = ConcatDataset([mnist_data, cifar10_data])
+    print('concat_data: ', len(concat_data))
+
+    img, target = concat_data.__getitem__(133)
+    print(np.array(img).shape)
+    print(target)
+
+    ##  output
+    # mnist:  60000
+    # Files already downloaded and verified
+    # cifar:  50000
+    # concat_data:  110000
+    # (28, 28)
+    # 9 
+
+```
+
+
