@@ -58,4 +58,20 @@ if __name__ == "__main__":
 
 ```
 
+## Layers with Different LR
+
+Backbone layer with one lr. and head loss part with bigger lr compare to backbone layer.
+
+```
+import torch
+
+lr = 0.01
+lr_loss = 0.1
+
+params_group = [{"params": self._backbone.parameters(),"lr": lr},
+              {"params": self._criterion.parameters(), "lr": lr_loss}]
+              
+optimizer = torch.optim.SGD(params_group)
+
+```
 
