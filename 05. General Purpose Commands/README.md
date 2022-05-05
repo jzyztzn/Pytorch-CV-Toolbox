@@ -1,6 +1,3 @@
-# PyTorch 用户手册（Pytorch User Manual）
-![pytorch](pytorch-logo-dark.png)
-
 # Linux General Purpose Commands
 
 ## 统计某文件夹下文件的个数
@@ -83,7 +80,7 @@ import warnings
 warnings.filterwarnings("ignore")
 
 
-# 删除git分支
+## 删除git分支
 https://chinese.freecodecamp.org/news/how-to-delete-a-git-branch-both-locally-and-remotely/
 
 git branch -d master2
