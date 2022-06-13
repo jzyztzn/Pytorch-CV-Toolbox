@@ -44,3 +44,12 @@
 ![](https://i.creativecommons.org/l/by-nc-sa/3.0/88x31.png)
 
 [本作品采用知识共享署名-非商业性使用-相同方式共享 3.0  中国大陆许可协议进行许可](http://creativecommons.org/licenses/by-nc-sa/3.0/cn)
+
+
+### 第三章：Pytorch搭建自己的网络结构及工程代码
+
+1. Model summary in Pytorch
+
+在使用 Pytorch 创建完模型之后, 我们希望可以有一个工具可以看到模型的参数个数, 模型占用的内容. 这个就类似于在 Keras 中的 model.summary() 的功能. 但是在 Pytorch 中, 本身并没有实现这个功能, 但是有一个库实现了该功能.  pytorch-summary. 这里简单介绍一下。
+
+参考链接：https://github.com/sksq96/pytorch-summary
