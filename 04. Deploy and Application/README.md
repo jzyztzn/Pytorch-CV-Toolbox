@@ -29,6 +29,13 @@
 
 通过修改模型，实现动态输入，链接：https://mmdeploy.readthedocs.io/zh_CN/latest/05-tutorial/02_challenges.html
 
+示例是一个图像超分辨率的例子，其中想实现的是通过外部的变量实现不同倍率的插值方式，但是在 PyTorch 中无论是使用最早的 nn.Upsample，还是后来的 interpolate，PyTorch 里的插值操作最后都会转换成 ONNX 定义的 Resize 操作。也就是说，所谓 PyTorch 转 ONNX，实际上就是把每个 PyTorch 的操作映射成了 ONNX 定义的算子。
+
+因此需要自己生产一个ONNX的Resize算子，让scales成为一个支持外部输入的变量，从而实现模型的动态缩放的输入。具体可以参考上述链接
+
+"""
+"""
+
 
 ## License
 
