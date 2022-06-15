@@ -25,6 +25,11 @@
 
 ### 第四章：Pytorch部署常见问题及相关工具
 
+1. ONNX模型部署
+
+通过修改模型，实现动态输入，链接：https://mmdeploy.readthedocs.io/zh_CN/latest/05-tutorial/02_challenges.html
+
+
 ## License
 
 ![](https://i.creativecommons.org/l/by-nc-sa/3.0/88x31.png)
